@@ -1,0 +1,57 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; 
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-bottom: 30px;
+}
+
+button.animated-button {
+    padding: 20px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #7a34db; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.4s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.animated-button::after {
+    content: "Magic!"; 
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+button.animated-button:hover {
+    transform: translateY(-10px) rotate(-25deg); 
+    background-color: #e62249; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    color: transparent; 
+}
+
+button.animated-button:hover::after {
+    opacity: 1; 
+    visibility: visible; 
+}
